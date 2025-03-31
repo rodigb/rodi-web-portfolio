@@ -24,14 +24,29 @@ const HomePage = () => {
               >
                 Hello,
               </Typography>
+              <Typography
+                variant="h2"
+                component="h1"
+                sx={{ fontWeight: "bold" }}
+              >
+                My Name Is Rodi Gemici.
+              </Typography>
 
               <Typography variant="h5" sx={{ mt: 2, fontWeight: "bold" }}>
                 <Typography variant="h5" sx={{ mt: 2, fontWeight: "bold" }}>
                   <Typewriter
                     options={{
-                      strings: ["Hello", "World"],
+                      strings: [
+                        "Front end engineer.",
+                        "Proficient in creating clean, user-friendly interfaces with a focus on UX/UI design.",
+                        "Integrating APIs and third-party services to enhance web functionality.",
+                        "Passionate about writing clean, maintainable code.",
+                        "Skilled in building responsive and dynamic websites using modern front-end technologies like React, Vue, and Angular.",
+                      ],
+
                       autoStart: true,
                       loop: true,
+                      delay: 50, // Adjust the typing speed (lower value = faster typing)
                     }}
                   />
                 </Typography>
@@ -52,7 +67,7 @@ const HomePage = () => {
                 }}
                 onClick={() => (window.location.href = "#contact")}
               >
-                Contact Me
+                My CV / Resume
               </Button>
             </motion.div>
           </Grid>{" "}
