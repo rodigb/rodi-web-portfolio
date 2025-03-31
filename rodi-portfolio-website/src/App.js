@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import Sidebar from "./components/Sidebar.tsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./components/Homepage.tsx";
 
 function App() {
   return (
@@ -9,8 +10,8 @@ function App() {
       <Router>
         <Sidebar />
         <Routes>
-          <Route path="/" />
-          <Route path="/home" />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/home" element={<HomePage />} />
           <Route path="/about" />
           <Route path="/portfolio" />
           <Route path="/contact" />
