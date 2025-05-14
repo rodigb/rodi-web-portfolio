@@ -1,24 +1,32 @@
 import React from "react";
 import "./App.css";
-import Sidebar from "./components/Sidebar.tsx";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import HomePage from "./components/Homepage.tsx";
+import RightSideGrid from "./components/RightSideGrid.tsx";
+import { Box, createTheme } from "@mui/material";
 
 function App() {
+  const theme = createTheme({
+    typography: {
+      fontFamily: ["Silkscreen"],
+    },
+  });
   return (
-    <>
-      <Router>
-        <Sidebar />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/home" element={<HomePage />} />
-          <Route path="/about" />
-          <Route path="/portfolio" />
-          <Route path="/contact" />
-        </Routes>
-      </Router>
-      <div className="App"></div>
-    </>
+    <div className="App">
+      <Box
+        sx={{
+          fontFamily: theme.typography,
+          backgroundColor: "#072915", // brighter greenish-black
+          backgroundImage: `repeating-linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.1) 0px,
+            rgba(0, 0, 0, 1) 1px,
+            transparent 4px,
+            transparent 8px
+          )`,
+        }}
+      >
+        <RightSideGrid />
+      </Box>
+    </div>
   );
 }
 
