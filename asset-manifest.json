@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/rodi-web-portfolio/static/css/main.a2391e5c.css",
+    "main.js": "/rodi-web-portfolio/static/js/main.155dfd6c.js",
+    "static/js/453.df0b3e83.chunk.js": "/rodi-web-portfolio/static/js/453.df0b3e83.chunk.js",
+    "index.html": "/rodi-web-portfolio/index.html",
+    "static/media/cursor.svg": "/rodi-web-portfolio/static/media/cursor.f7a995fd3abc063ad663.svg",
+    "main.a2391e5c.css.map": "/rodi-web-portfolio/static/css/main.a2391e5c.css.map",
+    "main.155dfd6c.js.map": "/rodi-web-portfolio/static/js/main.155dfd6c.js.map",
+    "453.df0b3e83.chunk.js.map": "/rodi-web-portfolio/static/js/453.df0b3e83.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a2391e5c.css",
+    "static/js/main.155dfd6c.js"
+  ]
+}
