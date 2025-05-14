@@ -3,6 +3,8 @@ import { Box, Typography, Button, createTheme } from "@mui/material";
 import { motion } from "framer-motion";
 import { Link, scroller } from "react-scroll";
 import Typewriter from "typewriter-effect";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const LeftSideMenu = () => {
   const [active, setActive] = useState<string>("");
@@ -199,6 +201,37 @@ const LeftSideMenu = () => {
         >
           My CV / Resume
         </Button>
+        <Box mt={4} display="flex" justifyContent="center" gap={3}>
+          <a
+            href="https://github.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              textDecoration: "none",
+              outline: "none",
+              WebkitTapHighlightColor: "transparent",
+              cursor: "inherit",
+            }}
+          >
+            <GitHubIcon sx={{ fontSize: 24, color: "#21be61" }} />
+          </a>
+
+          <a
+            href="https://linkedin.com/in/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              textDecoration: "none",
+              outline: "none",
+              WebkitTapHighlightColor: "transparent",
+              cursor: "inherit",
+            }}
+          >
+            <LinkedInIcon
+              sx={{ fontSize: 24, color: "#21be61", cursor: "inherit" }}
+            />
+          </a>
+        </Box>
       </motion.div>
     </Box>
   );
