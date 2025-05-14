@@ -15,7 +15,6 @@ const LeftSideMenu = () => {
     },
   });
 
-  // Handle arrow key press
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       const currentIndex = sections.indexOf(active);
@@ -110,7 +109,6 @@ const LeftSideMenu = () => {
             spy={true}
             style={{
               display: "block",
-              cursor: "pointer",
               color: active === "home" ? "black" : "#21be61",
               backgroundColor: active === "home" ? "#21be61" : "transparent",
               padding: "5px",
@@ -131,7 +129,6 @@ const LeftSideMenu = () => {
             spy={true} // Keep track of the active section
             style={{
               display: "block",
-              cursor: "pointer",
               color: active === "about" ? "black" : "#21be61",
               backgroundColor: active === "about" ? "#21be61" : "transparent",
               padding: "5px",
@@ -152,7 +149,6 @@ const LeftSideMenu = () => {
             spy={true}
             style={{
               display: "block",
-              cursor: "pointer",
               color: active === "portfolio" ? "black" : "#21be61",
               backgroundColor:
                 active === "portfolio" ? "#21be61" : "transparent",
@@ -173,7 +169,6 @@ const LeftSideMenu = () => {
             spy={true}
             style={{
               display: "block",
-              cursor: "pointer",
               color: active === "contact" ? "black" : "#21be61",
               backgroundColor: active === "contact" ? "#21be61" : "transparent",
               padding: "5px",
@@ -193,9 +188,10 @@ const LeftSideMenu = () => {
             fontWeight: "bold",
             border: "2px solid #21be61",
             color: "#21be61",
+            cursor: "inherit",
             mt: 2,
             "&:hover": {
-              backgroundColor: "black",
+              backgroundColor: "#21be61",
               color: "white",
             },
           }}

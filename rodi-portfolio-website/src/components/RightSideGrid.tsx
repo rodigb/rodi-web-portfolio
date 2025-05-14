@@ -3,6 +3,7 @@ import { Box, Container, Grid, Typography } from "@mui/material";
 import LeftSideMenu from "./LeftSideMenu.tsx";
 import PersonalBio from "./Bio.tsx";
 import ExperienceCard from "./card/ExperienceCard.tsx";
+import ProjectCard from "./card/ProjectCard.tsx";
 
 const RightSideGrid = () => {
   return (
@@ -102,20 +103,34 @@ const RightSideGrid = () => {
                   id="portfolio-section"
                   sx={{
                     height: "100vh",
-                    bgcolor: "lightyellow",
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
+                    flexDirection: "column",
                   }}
                 >
-                  <Typography variant="h2">Portfolio Section</Typography>
+                  <ProjectCard
+                    title={"E-Commerce Website"}
+                    image={"/project1.jpg"}
+                    description={
+                      "E-Commerce peer-to-peer trading website, with live chat and messaging systems where users can create their accounts to upload products and list them for sale. Uses HTML, CSS, PHP and mySQL."
+                    }
+                    tags={["HTML", "CSS", "PHP", "mySQL"]}
+                  />
+                  <ProjectCard
+                    title={"E-Commerce Website"}
+                    image={"/project1.jpg"}
+                    description={
+                      "E-Commerce peer-to-peer trading website, with live chat and messaging systems where users can create their accounts to upload products and list them for sale. Uses HTML, CSS, PHP and mySQL."
+                    }
+                    tags={["HTML", "CSS", "PHP", "mySQL"]}
+                  />
                 </Box>
 
                 <Box
                   id="contact-section"
                   sx={{
                     height: "100vh",
-                    bgcolor: "lightgray",
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",

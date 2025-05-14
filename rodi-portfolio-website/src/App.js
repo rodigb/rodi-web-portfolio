@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import "./App.css";
 import RightSideGrid from "./components/RightSideGrid.tsx";
 import { Box, createTheme } from "@mui/material";
@@ -9,6 +9,20 @@ function App() {
       fontFamily: ["Silkscreen"],
     },
   });
+
+  const cursorRef = useRef(null);
+
+  useEffect(() => {
+    const moveCursor = (e: MouseEvent) => {
+      if (cursorRef.current) {
+        cursorRef.current.style.top = `${e.clientY}px`;
+        cursorRef.current.style.left = `${e.clientX}px`;
+      }
+    };
+
+    document.addEventListener("mousemove", moveCursor);
+    return () => document.removeEventListener("mousemove", moveCursor);
+  }, []);
   return (
     <div className="App">
       <Box
@@ -25,7 +39,8 @@ function App() {
         }}
       >
         <RightSideGrid />
-      </Box>
+      </Box>{" "}
+      <div className="custom-cursor" ref={cursorRef}></div>
     </div>
   );
 }

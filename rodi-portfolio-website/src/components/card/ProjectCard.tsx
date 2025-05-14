@@ -1,18 +1,22 @@
 import React from "react";
-import { Box, Typography, Stack, createTheme, Chip } from "@mui/material";
+import { Box, Typography, Chip, Stack, createTheme } from "@mui/material";
 
-const ExperienceCard = ({
+type ProjectCardProps = {
+  image: string;
+  title: string;
+  description: string;
+  stars?: number;
+  tags: string[];
+  link?: string;
+};
+
+const ProjectCard: React.FC<ProjectCardProps> = ({
+  image,
   title,
   description,
-  jobTitle,
-  tools = [],
-  date,
-}: {
-  title: string;
-  jobTitle: string;
-  description: string;
-  tools: Array<string>;
-  date: string;
+  stars,
+  tags,
+  link,
 }) => {
   const theme = createTheme({
     typography: {
@@ -34,22 +38,21 @@ const ExperienceCard = ({
         mt: 10,
       }}
     >
-      {/* Left column: Date */}
-      <Box sx={{ minWidth: "140px" }}>
-        <Typography
-          sx={{
-            fontSize: "1.2rem",
-            color: "#21be61",
-            fontFamily: `${theme.typography.fontFamily}`,
-          }}
-        >
-          {date}
-        </Typography>
-      </Box>
+      {/* Image */}
+      <Box
+        component="img"
+        src={image}
+        alt={title}
+        sx={{
+          width: 130,
+          height: "auto",
+          borderRadius: 1,
+          objectFit: "cover",
+        }}
+      />
 
-      {/* Right column: Title, description, tools */}
-      <Box>
-        {/* Title */}
+      {/* Content */}
+      <Box sx={{ minWidth: "140px" }}>
         <Typography
           sx={{
             fontSize: "1.6rem",
@@ -58,31 +61,29 @@ const ExperienceCard = ({
             fontFamily: `${theme.typography.fontFamily}`,
           }}
         >
-          {title}
+          {link ? (
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#ffffff", textDecoration: "none" }}
+            >
+              {title} ↗
+            </a>
+          ) : (
+            title
+          )}
         </Typography>
-        <Typography
-          sx={{
-            fontSize: "1.2rem",
-            fontWeight: "bold",
-            color: "#21be61",
-            fontFamily: `${theme.typography.fontFamily}`,
-          }}
-        >
-          {jobTitle}
-        </Typography>
-
-        {/* Description */}
         <Typography
           sx={{
             fontSize: "0.8rem",
-            mt: 1,
+            color: "#21be61",
             fontFamily: `${theme.typography.fontFamily}`,
           }}
         >
           {description}
         </Typography>
 
-        {/* Tools */}
         <Stack
           direction="row"
           spacing={1}
@@ -93,7 +94,7 @@ const ExperienceCard = ({
             alignItems: "flex-start",
           }}
         >
-          {tools.map((tool) => (
+          {tags.map((tool) => (
             <Chip
               key={tool}
               label={tool}
@@ -119,4 +120,4 @@ const ExperienceCard = ({
   );
 };
 
-export default ExperienceCard;
+export default ProjectCard;
