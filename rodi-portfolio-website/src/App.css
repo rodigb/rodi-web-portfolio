@@ -38,10 +38,16 @@
   }
 }
 
-/* App.css */
-body,
+ body,
 html {
-  cursor: url("./images/cursor.svg") 0 0, auto;
+  cursor: url("./images/cursor.svg") 0 0, auto;  
+  background-color: #0a0f2c;
+
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;  
 }
 
  
