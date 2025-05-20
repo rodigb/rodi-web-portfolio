@@ -1,16 +1,25 @@
 {
   "files": {
-    "main.css": "/rodi-web-portfolio/static/css/main.74e95643.css",
-    "main.js": "/rodi-web-portfolio/static/js/main.3f883459.js",
+    "main.css": "/rodi-web-portfolio/static/css/main.a297e99a.css",
+    "main.js": "/rodi-web-portfolio/static/js/main.0d306102.js",
     "static/js/453.df0b3e83.chunk.js": "/rodi-web-portfolio/static/js/453.df0b3e83.chunk.js",
+    "static/media/alarmclock.png": "/rodi-web-portfolio/static/media/alarmclock.086e06bb4816b53e367b.png",
+    "static/media/ecommerce.png": "/rodi-web-portfolio/static/media/ecommerce.005b9b8260434598d947.png",
+    "static/media/gymapp.png": "/rodi-web-portfolio/static/media/gymapp.3310e0546c58a60a3967.png",
+    "static/media/3js.png": "/rodi-web-portfolio/static/media/3js.657383521fe58cf3b64a.png",
+    "static/media/rodicv.pdf": "/rodi-web-portfolio/static/media/rodicv.3f746a752686137d306b.pdf",
+    "static/media/zeiss.png": "/rodi-web-portfolio/static/media/zeiss.02b9f1090753abc96c03.png",
+    "static/media/navapp.png": "/rodi-web-portfolio/static/media/navapp.120fbbc8a789a0e2abb4.png",
+    "static/media/dtime.png": "/rodi-web-portfolio/static/media/dtime.573c28c38c1c7d33c6d2.png",
+    "static/media/portfoliov1.png": "/rodi-web-portfolio/static/media/portfoliov1.c1601cc915be4b456b0a.png",
     "index.html": "/rodi-web-portfolio/index.html",
-    "static/media/cursor.svg": "/rodi-web-portfolio/static/media/cursor.f7a995fd3abc063ad663.svg",
-    "main.74e95643.css.map": "/rodi-web-portfolio/static/css/main.74e95643.css.map",
-    "main.3f883459.js.map": "/rodi-web-portfolio/static/js/main.3f883459.js.map",
+    "static/media/cursor.svg": "/rodi-web-portfolio/static/media/cursor.ae86f4a743d6449bed14.svg",
+    "main.a297e99a.css.map": "/rodi-web-portfolio/static/css/main.a297e99a.css.map",
+    "main.0d306102.js.map": "/rodi-web-portfolio/static/js/main.0d306102.js.map",
     "453.df0b3e83.chunk.js.map": "/rodi-web-portfolio/static/js/453.df0b3e83.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.74e95643.css",
-    "static/js/main.3f883459.js"
+    "static/css/main.a297e99a.css",
+    "static/js/main.0d306102.js"
   ]
 }
