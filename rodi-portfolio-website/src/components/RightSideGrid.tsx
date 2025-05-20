@@ -251,13 +251,57 @@ const RightSideGrid = () => {
                 <Box
                   id="contact-section"
                   sx={{
-                    minHeight: "100vh",
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
+                    p: 5,
                   }}
                 >
-                  <Typography variant="caption">Contact Section</Typography>
+                  <Typography variant="caption" textAlign="left">
+                    Coded in{" "}
+                    <a
+                      href="https://code.visualstudio.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        color: "#66ccff",
+                        borderBottom: "1px dashed #66ccff",
+                        paddingBottom: "1px",
+                        textDecoration: "none",
+                      }}
+                    >
+                      Visual Studio Code
+                    </a>{" "}
+                    using{" "}
+                    <a
+                      href="https://mui.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        color: "#66ccff",
+                        borderBottom: "1px dashed #66ccff",
+                        paddingBottom: "1px",
+                        textDecoration: "none",
+                      }}
+                    >
+                      MUI
+                    </a>{" "}
+                    and{" "}
+                    <a
+                      href="https://reactjs.org/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        color: "#66ccff",
+                        borderBottom: "1px dashed #66ccff",
+                        paddingBottom: "1px",
+                        textDecoration: "none",
+                      }}
+                    >
+                      ReactJS
+                    </a>
+                    .
+                  </Typography>
                 </Box>
               </div>
             </Container>

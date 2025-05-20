@@ -173,32 +173,6 @@ const LeftSideMenu = () => {
               Portfolio
             </Typography>
           </Link>
-          <Link
-            to="contact-section"
-            smooth={true}
-            duration={200}
-            activeClass="active-link"
-            spy={true}
-            style={{
-              display: "block",
-              color: active === "contact" ? "black" : "#66ccff",
-              backgroundColor: active === "contact" ? "#66ccff" : "transparent",
-              padding: "5px",
-              fontWeight: "bold",
-            }}
-            onSetActive={() => setActive("contact")}
-          >
-            <Typography
-              variant="h6"
-              fontWeight="bold"
-              gutterBottom
-              sx={{
-                color: active === "contact" ? "black !important" : "25d46c",
-              }}
-            >
-              Contact
-            </Typography>
-          </Link>
         </Box>
         <Button
           variant="outlined"
@@ -221,7 +195,7 @@ const LeftSideMenu = () => {
         </Button>
         <Box mt={4} display="flex" justifyContent="center" gap={3}>
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/rodigb"
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -235,7 +209,7 @@ const LeftSideMenu = () => {
           </a>
 
           <a
-            href="https://linkedin.com/in/yourusername"
+            href="https://uk.linkedin.com/in/rodi-gemici-5b792a182"
             target="_blank"
             rel="noopener noreferrer"
             style={{
