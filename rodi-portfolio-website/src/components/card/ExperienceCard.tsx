@@ -16,106 +16,101 @@ const ExperienceCard = ({
 }) => {
   const theme = createTheme({
     typography: {
-      fontFamily: ["Silkscreen"],
+      fontFamily: ["Orbitron"],
     },
   });
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: { xs: "column", sm: "row" },
-        gap: 3,
-        backgroundColor: "transparent",
-        color: "#21be61",
-        maxWidth: 900,
-        width: "100%",
-        lineHeight: 1.6,
-        textAlign: "left",
-        mt: 10,
-      }}
-    >
-      {/* Left column: Date */}
-      <Box sx={{ minWidth: "140px" }}>
-        <Typography
-          sx={{
-            fontSize: "1.2rem",
-            color: "#21be61",
-            fontFamily: `${theme.typography.fontFamily}`,
-          }}
-        >
-          {date}
-        </Typography>
+    <>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", sm: "row" },
+          gap: 3,
+          p: 2,
+          backgroundColor: "transparent",
+          maxWidth: 900,
+          width: "100%",
+          lineHeight: 1.6,
+          textAlign: "left",
+          mt: 15,
+          transition: "all 0.3s ease-in-out",
+          "&:hover": {
+            backgroundColor: "rgba(102, 204, 255, 0.1)",
+            boxShadow: "0 0 3px #66ccff",
+            transform: "scale(1.01)",
+          },
+        }}
+      >
+        {/* Left column: Date */}
+        <Box sx={{ minWidth: "140px" }}>
+          <Typography
+            sx={{
+              fontSize: "0.8rem",
+              fontFamily: `${theme.typography.fontFamily}`,
+            }}
+          >
+            {date}
+          </Typography>
+        </Box>
+        {/* Right column: Title, description, tools */}
+        <Box>
+          {/* Title */}
+          <Typography
+            sx={{
+              fontSize: "1.6rem",
+            }}
+          >
+            {title}
+          </Typography>
+          <Typography
+            sx={{
+              fontSize: "1.2rem",
+            }}
+          >
+            {jobTitle}
+          </Typography>
+          <Typography
+            sx={{
+              fontSize: "0.8rem",
+              mt: 1,
+            }}
+          >
+            {description}
+          </Typography>
+          {/* Tools */}
+          <Stack
+            direction="row"
+            spacing={1}
+            useFlexGap
+            flexWrap="wrap"
+            sx={{
+              mt: 2,
+              alignItems: "flex-start",
+            }}
+          >
+            {tools.map((tool) => (
+              <Chip
+                key={tool}
+                label={tool}
+                sx={{
+                  backgroundColor: "#66ccff",
+                  color: "#000",
+                  fontSize: "1rem",
+                  fontWeight: "bold",
+                  borderRadius: "2px",
+                  height: "auto",
+                  paddingY: "2px",
+                  paddingX: "8px",
+                  ".MuiChip-label": {
+                    padding: 0,
+                  },
+                }}
+              />
+            ))}
+          </Stack>
+        </Box>
       </Box>
-
-      {/* Right column: Title, description, tools */}
-      <Box>
-        {/* Title */}
-        <Typography
-          sx={{
-            fontSize: "1.6rem",
-            fontWeight: "bold",
-            color: "#21be61",
-            fontFamily: `${theme.typography.fontFamily}`,
-          }}
-        >
-          {title}
-        </Typography>
-        <Typography
-          sx={{
-            fontSize: "1.2rem",
-            fontWeight: "bold",
-            color: "#21be61",
-            fontFamily: `${theme.typography.fontFamily}`,
-          }}
-        >
-          {jobTitle}
-        </Typography>
-
-        {/* Description */}
-        <Typography
-          sx={{
-            fontSize: "0.8rem",
-            mt: 1,
-            fontFamily: `${theme.typography.fontFamily}`,
-          }}
-        >
-          {description}
-        </Typography>
-
-        {/* Tools */}
-        <Stack
-          direction="row"
-          spacing={1}
-          useFlexGap
-          flexWrap="wrap"
-          sx={{
-            mt: 2,
-            alignItems: "flex-start",
-          }}
-        >
-          {tools.map((tool) => (
-            <Chip
-              key={tool}
-              label={tool}
-              sx={{
-                backgroundColor: "#21be61",
-                color: "#000",
-                fontWeight: "bold",
-                fontSize: "1rem",
-                fontFamily: `${theme.typography.fontFamily}`,
-                borderRadius: "2px",
-                height: "auto",
-                paddingY: "2px",
-                paddingX: "8px",
-                ".MuiChip-label": {
-                  padding: 0,
-                },
-              }}
-            />
-          ))}
-        </Stack>
-      </Box>
-    </Box>
+    </>
   );
 };
 

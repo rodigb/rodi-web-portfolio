@@ -5,17 +5,12 @@ import { Link, scroller } from "react-scroll";
 import Typewriter from "typewriter-effect";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import RodiCv from "../static/rodicv.pdf";
 
 const LeftSideMenu = () => {
   const [active, setActive] = useState<string>("");
   const sections = ["home", "about", "portfolio", "contact"];
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
-
-  const theme = createTheme({
-    typography: {
-      fontFamily: ["Silkscreen"],
-    },
-  });
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -74,16 +69,14 @@ const LeftSideMenu = () => {
         <Box>
           <Typography
             variant="h4"
-            fontWeight="bold"
-            sx={{ color: "#21be61", lineHeight: 1, mb: 1 }}
+            sx={{ color: "#25d46c", lineHeight: 1, mb: 1 }}
           >
             Rodi Gemici-Bektas
           </Typography>
           <Typography
             variant="caption"
-            fontFamily={theme.typography.fontFamily}
             textAlign="left"
-            sx={{ color: "#21be61", lineHeight: 1, mb: 1 }}
+            sx={{ color: "#66ccff", lineHeight: 1, mb: 1 }}
           >
             <Typewriter
               options={{
@@ -111,14 +104,19 @@ const LeftSideMenu = () => {
             spy={true}
             style={{
               display: "block",
-              color: active === "home" ? "black" : "#21be61",
-              backgroundColor: active === "home" ? "#21be61" : "transparent",
+              color: active === "home" ? "black" : "#66ccff",
+              backgroundColor: active === "home" ? "#66ccff" : "transparent",
               padding: "5px",
               fontWeight: "bold",
             }}
             onSetActive={() => setActive("home")}
           >
-            <Typography variant="h6" fontWeight="bold" gutterBottom>
+            <Typography
+              variant="h6"
+              fontWeight="bold"
+              gutterBottom
+              sx={{ color: active === "home" ? "black !important" : "25d46c" }}
+            >
               Home
             </Typography>
           </Link>
@@ -131,14 +129,19 @@ const LeftSideMenu = () => {
             spy={true} // Keep track of the active section
             style={{
               display: "block",
-              color: active === "about" ? "black" : "#21be61",
-              backgroundColor: active === "about" ? "#21be61" : "transparent",
+              color: active === "about" ? "black" : "#66ccff",
+              backgroundColor: active === "about" ? "#66ccff" : "transparent",
               padding: "5px",
               fontWeight: "bold",
             }}
             onSetActive={() => setActive("about")}
           >
-            <Typography variant="h6" fontWeight="bold" gutterBottom>
+            <Typography
+              variant="h6"
+              fontWeight="bold"
+              gutterBottom
+              sx={{ color: active === "about" ? "black !important" : "25d46c" }}
+            >
               Experience
             </Typography>
           </Link>
@@ -151,15 +154,22 @@ const LeftSideMenu = () => {
             spy={true}
             style={{
               display: "block",
-              color: active === "portfolio" ? "black" : "#21be61",
+              color: active === "portfolio" ? "black" : "#66ccff",
               backgroundColor:
-                active === "portfolio" ? "#21be61" : "transparent",
+                active === "portfolio" ? "#66ccff" : "transparent",
               padding: "5px",
               fontWeight: "bold",
             }}
             onSetActive={() => setActive("portfolio")}
           >
-            <Typography variant="h6" fontWeight="bold" gutterBottom>
+            <Typography
+              variant="h6"
+              fontWeight="bold"
+              gutterBottom
+              sx={{
+                color: active === "portfolio" ? "black !important" : "25d46c",
+              }}
+            >
               Portfolio
             </Typography>
           </Link>
@@ -171,14 +181,21 @@ const LeftSideMenu = () => {
             spy={true}
             style={{
               display: "block",
-              color: active === "contact" ? "black" : "#21be61",
-              backgroundColor: active === "contact" ? "#21be61" : "transparent",
+              color: active === "contact" ? "black" : "#66ccff",
+              backgroundColor: active === "contact" ? "#66ccff" : "transparent",
               padding: "5px",
               fontWeight: "bold",
             }}
             onSetActive={() => setActive("contact")}
           >
-            <Typography variant="h6" fontWeight="bold" gutterBottom>
+            <Typography
+              variant="h6"
+              fontWeight="bold"
+              gutterBottom
+              sx={{
+                color: active === "contact" ? "black !important" : "25d46c",
+              }}
+            >
               Contact
             </Typography>
           </Link>
@@ -186,18 +203,19 @@ const LeftSideMenu = () => {
         <Button
           variant="outlined"
           size="large"
+          href={RodiCv}
+          target="_blank"
           sx={{
             fontWeight: "bold",
-            border: "2px solid #21be61",
-            color: "#21be61",
+            border: "2px solid #66ccff",
+            color: "#66ccff",
             cursor: "inherit",
             mt: 2,
             "&:hover": {
-              backgroundColor: "#21be61",
+              backgroundColor: "#66ccff",
               color: "white",
             },
           }}
-          onClick={() => (window.location.href = "#contact")}
         >
           My CV / Resume
         </Button>
@@ -213,7 +231,7 @@ const LeftSideMenu = () => {
               cursor: "inherit",
             }}
           >
-            <GitHubIcon sx={{ fontSize: 24, color: "#21be61" }} />
+            <GitHubIcon sx={{ fontSize: 24, color: "#66ccff" }} />
           </a>
 
           <a
@@ -228,7 +246,7 @@ const LeftSideMenu = () => {
             }}
           >
             <LinkedInIcon
-              sx={{ fontSize: 24, color: "#21be61", cursor: "inherit" }}
+              sx={{ fontSize: 24, color: "#66ccff", cursor: "inherit" }}
             />
           </a>
         </Box>

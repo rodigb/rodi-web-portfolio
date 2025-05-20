@@ -1,9 +1,18 @@
 import React from "react";
-import { Box, Container, Grid, Typography } from "@mui/material";
+import { Box, Container, Divider, Grid, Typography } from "@mui/material";
 import LeftSideMenu from "./LeftSideMenu.tsx";
 import PersonalBio from "./Bio.tsx";
 import ExperienceCard from "./card/ExperienceCard.tsx";
 import ProjectCard from "./card/ProjectCard.tsx";
+import ZeissImage from "../images/zeiss.png";
+import Dtime from "../images/dtime.png";
+import Azzab from "../images/ecommerce.png";
+import ProjectEarth from "../images/3js.png";
+import PortfolioV1 from "../images/portfoliov1.png";
+import GymApp from "../images/gymapp.png";
+import NavApp from "../images/navapp.png";
+import AlarmClock from "../images/alarmclock.png";
+import RodiCv from "../static/rodicv.pdf";
 
 const RightSideGrid = () => {
   return (
@@ -17,10 +26,10 @@ const RightSideGrid = () => {
               sx={{
                 position: "sticky",
                 top: 0,
-                height: "100vh", // Ensure full viewport height
-                display: "flex", // Enable flexbox
-                alignItems: "left", // Vertically center
-                justifyContent: "left", // Optional: horizontally center
+                height: "100vh",
+                display: "flex",
+                alignItems: "left",
+                justifyContent: "left",
               }}
             >
               <LeftSideMenu />
@@ -41,7 +50,7 @@ const RightSideGrid = () => {
                 <Box
                   id="home-section"
                   sx={{
-                    height: "100vh",
+                    minHeight: "100vh",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -53,7 +62,7 @@ const RightSideGrid = () => {
                 <Box
                   id="about-section"
                   sx={{
-                    height: "100vh",
+                    minHeight: "100vh",
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
@@ -98,11 +107,57 @@ const RightSideGrid = () => {
                     date={"Aug 2021 - Feb 2022"}
                   />
                 </Box>
+                <Box
+                  sx={{
+                    wdith: "100%",
+                    mt: 2,
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <Typography
+                    textAlign={"left"}
+                    sx={{
+                      color: "white",
+                      opacity: 0.6,
+                      "&:hover": {
+                        opacity: 1,
+                        color: "white",
+                      },
+                      "&:hover .arrow": {
+                        transform: "translateY(-6px)",
+                        opacity: 1,
+                        color: "white",
+                      },
+                      ".arrow": {
+                        display: "inline-block",
+                        marginLeft: "6px",
+                        transition: "all 0.3s ease-in-out",
+                        transform: "translateY(0)",
+                        opacity: 0.6,
+                      },
+                    }}
+                  >
+                    <a
+                      href={RodiCv}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        textDecoration: "none",
+                        display: "block",
+                        color: "white",
+                      }}
+                    >
+                      View My Full CV here <span className="arrow">↗</span>
+                    </a>
+                  </Typography>
+                </Box>
+                <Divider sx={{ my: 2, borderColor: "#66ccff", opacity: 0.3 }} />
 
                 <Box
                   id="portfolio-section"
                   sx={{
-                    height: "100vh",
+                    minHeight: "100vh",
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
@@ -110,33 +165,99 @@ const RightSideGrid = () => {
                   }}
                 >
                   <ProjectCard
-                    title={"E-Commerce Website"}
-                    image={"/project1.jpg"}
+                    title={"CinCraft Scenario and Xport"}
+                    image={ZeissImage}
                     description={
-                      "E-Commerce peer-to-peer trading website, with live chat and messaging systems where users can create their accounts to upload products and list them for sale. Uses HTML, CSS, PHP and mySQL."
+                      "During my time at Carl Zeiss, I helped develop the front end of CinCraft Scenario and Xport applications as well as with the connection to the backend."
                     }
-                    tags={["HTML", "CSS", "PHP", "mySQL"]}
+                    tags={[
+                      "React",
+                      "TypeScript",
+                      "MUI",
+                      "Figma",
+                      "RESTful APIs",
+                      "Redux",
+                      "Jest",
+                      "Azure DevOps",
+                      "Git",
+                    ]}
+                    link={"https://cincraft.zeiss.com/us/cincraft-scenario"}
+                  />
+                  <ProjectCard
+                    title={"Dtime Data Search Portal"}
+                    image={Dtime}
+                    description={
+                      "During my time at Dtime, I helped develop a data search portal for querying, searching, filtering and downloading of public datasets via an API to form JSON objects using Python, JavaScript, HTML and CSS with a team using agile software development."
+                    }
+                    link={"https://dtechtive.com/home"}
+                    tags={["HTML", "CSS", "JavaScript", "Python"]}
                   />
                   <ProjectCard
                     title={"E-Commerce Website"}
-                    image={"/project1.jpg"}
+                    image={Azzab}
                     description={
                       "E-Commerce peer-to-peer trading website, with live chat and messaging systems where users can create their accounts to upload products and list them for sale. Uses HTML, CSS, PHP and mySQL."
                     }
+                    link={"https://github.com/rodigb/e-commerce_website"}
                     tags={["HTML", "CSS", "PHP", "mySQL"]}
+                  />
+                  <ProjectCard
+                    title={"Project Earth"}
+                    image={ProjectEarth}
+                    description={
+                      "This was a fun project that utilizes threeJS to display animated 3D computer graphics. In my project you can find a 3D design of our planet, moon and sun."
+                    }
+                    link={"https://rodigb.github.io/project-earth/"}
+                    tags={["JavaScript", "threeJS"]}
+                  />
+                  <ProjectCard
+                    title={"My Portfolio Website V1"}
+                    image={PortfolioV1}
+                    description={
+                      "This website was created to act as my first online portoflio. Utilized ReactJS."
+                    }
+                    link={"https://github.com/rodigb/portfolio-website-rodi"}
+                    tags={["JavaScript", "ReactJS", "HTML", "CSS"]}
+                  />
+                  <ProjectCard
+                    title={"Gym Tracking App"}
+                    image={GymApp}
+                    description={
+                      "Developed a mobile application that tracked gym progress such as lifts, with notifications and allows you to compare your lifts to strength standard levels. Utilized Java."
+                    }
+                    link={"https://github.com/rodigb/Gym-Tracking-App"}
+                    tags={["Java"]}
+                  />
+                  <ProjectCard
+                    title={"Navigation Application"}
+                    image={NavApp}
+                    description={
+                      "A navigation application, where you can add roads, remove roads, add users and compute how much energy is required to reach the destination that utilizes OOP with Java."
+                    }
+                    link={"https://github.com/rodigb/NavigationApp/"}
+                    tags={["Java"]}
+                  />
+                  <ProjectCard
+                    title={"Alarm Clock"}
+                    image={AlarmClock}
+                    description={
+                      "Arduino programmed as an alarm clock / timer. You can set a timer, where the alarm will change colour to red when the time is reached. Can be snoozed or turned off. Utilized C++."
+                    }
+                    link={"https://github.com/rodigb/Gym-Tracking-App"}
+                    tags={["C++"]}
                   />
                 </Box>
 
                 <Box
                   id="contact-section"
                   sx={{
-                    height: "100vh",
+                    minHeight: "100vh",
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
                   }}
                 >
-                  <Typography variant="h2">Contact Section</Typography>
+                  <Typography variant="caption">Contact Section</Typography>
                 </Box>
               </div>
             </Container>

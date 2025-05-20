@@ -5,7 +5,6 @@ type ProjectCardProps = {
   image: string;
   title: string;
   description: string;
-  stars?: number;
   tags: string[];
   link?: string;
 };
@@ -14,96 +13,81 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   image,
   title,
   description,
-  stars,
   tags,
   link,
 }) => {
   const theme = createTheme({
     typography: {
-      fontFamily: ["Silkscreen"],
+      fontFamily: ["Orbitron"],
     },
   });
-  return (
+
+  const CardContent = (
     <Box
       sx={{
         display: "flex",
         flexDirection: { xs: "column", sm: "row" },
         gap: 3,
+        p: 2,
         backgroundColor: "transparent",
-        color: "#21be61",
         maxWidth: 900,
         width: "100%",
         lineHeight: 1.6,
         textAlign: "left",
         mt: 10,
+        transition: "all 0.3s ease-in-out",
+        cursor: link ? "pointer" : "default",
+        "&:hover": {
+          backgroundColor: "rgba(102, 204, 255, 0.1)",
+          boxShadow: link ? "0 0 3px #66ccff" : "none",
+          transform: link ? "scale(1.01)" : "none",
+        },
+        "&:hover .arrow": {
+          transform: "translateY(-6px)",
+          opacity: 1,
+        },
+        ".arrow": {
+          display: "inline-block",
+          marginLeft: "6px",
+          transition: "all 0.3s ease-in-out",
+          transform: "translateY(0)",
+          opacity: 0.6,
+        },
       }}
     >
-      {/* Image */}
       <Box
         component="img"
         src={image}
-        alt={title}
         sx={{
-          width: 130,
-          height: "auto",
-          borderRadius: 1,
-          objectFit: "cover",
+          width: 200,
+          objectFit: "contain",
+          padding: 2,
         }}
       />
 
-      {/* Content */}
       <Box sx={{ minWidth: "140px" }}>
-        <Typography
-          sx={{
-            fontSize: "1.6rem",
-            fontWeight: "bold",
-            color: "#21be61",
-            fontFamily: `${theme.typography.fontFamily}`,
-          }}
-        >
-          {link ? (
-            <a
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: "#ffffff", textDecoration: "none" }}
-            >
-              {title} ↗
-            </a>
-          ) : (
-            title
-          )}
+        <Typography sx={{ color: "#ffffff", fontWeight: "bold" }}>
+          {title} {link && <span className="arrow">↗</span>}
         </Typography>
-        <Typography
-          sx={{
-            fontSize: "0.8rem",
-            color: "#21be61",
-            fontFamily: `${theme.typography.fontFamily}`,
-          }}
-        >
-          {description}
-        </Typography>
+        <Typography sx={{ color: "#66ccff" }}>{description}</Typography>
 
         <Stack
           direction="row"
           spacing={1}
           useFlexGap
           flexWrap="wrap"
-          sx={{
-            mt: 2,
-            alignItems: "flex-start",
-          }}
+          sx={{ mt: 2, alignItems: "flex-start" }}
         >
           {tags.map((tool) => (
             <Chip
               key={tool}
               label={tool}
               sx={{
-                backgroundColor: "#21be61",
+                backgroundColor: "#66ccff",
                 color: "#000",
-                fontWeight: "bold",
                 fontSize: "1rem",
                 fontFamily: `${theme.typography.fontFamily}`,
+                fontWeight: "bold",
                 borderRadius: "2px",
                 height: "auto",
                 paddingY: "2px",
@@ -117,6 +101,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </Stack>
       </Box>
     </Box>
+  );
+
+  return link ? (
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ textDecoration: "none", color: "inherit", display: "block" }}
+    >
+      {CardContent}
+    </a>
+  ) : (
+    CardContent
   );
 };
 
