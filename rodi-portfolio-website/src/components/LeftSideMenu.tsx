@@ -180,7 +180,7 @@ const LeftSideMenu = () => {
         <Button
           variant="outlined"
           size="large"
-          href={RodiCv}
+          href={"rodigb.github.io/static/rodicv.pdf"} //change according to pdf location
           target="_blank"
           sx={{
             fontWeight: "bold",
