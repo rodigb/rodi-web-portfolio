@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Typography, Chip, Stack, createTheme } from "@mui/material";
+import cursor from "../../images/cursor.svg";
 
 type ProjectCardProps = {
   image: string;
@@ -28,15 +29,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         display: "flex",
         flexDirection: { xs: "column", sm: "row" },
         gap: 3,
-        p: 2,
+        p: 3,
         backgroundColor: "transparent",
         maxWidth: 900,
         width: "100%",
         lineHeight: 1.6,
         textAlign: "left",
-        mt: 10,
+
         transition: "all 0.3s ease-in-out",
-        cursor: link ? "pointer" : "default",
         "&:hover": {
           backgroundColor: "rgba(102, 204, 255, 0.1)",
           boxShadow: link ? "0 0 3px #66ccff" : "none",
@@ -66,10 +66,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       />
 
       <Box sx={{ minWidth: "140px" }}>
-        <Typography sx={{ color: "#ffffff", fontWeight: "bold" }}>
+        <Typography
+          sx={{ color: "#ffffff", fontWeight: "bold", fontSize: "1.2rem" }}
+        >
           {title} {link && <span className="arrow">↗</span>}
         </Typography>
-        <Typography sx={{ color: "#66ccff" }}>{description}</Typography>
+        <Typography sx={{ color: "#66ccff", fontSize: "0.8rem" }}>
+          {description}
+        </Typography>
 
         <Stack
           direction="row"

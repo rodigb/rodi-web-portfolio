@@ -45,7 +45,7 @@ function App() {
           }}
         >
           <RightSideGrid />
-        </Box>{" "}
+        </Box>
         <div className="cursor-glow" ref={cursorRef}></div>
       </div>
     </ThemeProvider>

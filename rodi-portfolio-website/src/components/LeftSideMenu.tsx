@@ -108,6 +108,7 @@ const LeftSideMenu = () => {
               backgroundColor: active === "home" ? "#66ccff" : "transparent",
               padding: "5px",
               fontWeight: "bold",
+              cursor: "pointer",
             }}
             onSetActive={() => setActive("home")}
           >
@@ -133,6 +134,7 @@ const LeftSideMenu = () => {
               backgroundColor: active === "about" ? "#66ccff" : "transparent",
               padding: "5px",
               fontWeight: "bold",
+              cursor: "pointer",
             }}
             onSetActive={() => setActive("about")}
           >
@@ -159,6 +161,7 @@ const LeftSideMenu = () => {
                 active === "portfolio" ? "#66ccff" : "transparent",
               padding: "5px",
               fontWeight: "bold",
+              cursor: "pointer",
             }}
             onSetActive={() => setActive("portfolio")}
           >
@@ -183,7 +186,6 @@ const LeftSideMenu = () => {
             fontWeight: "bold",
             border: "2px solid #66ccff",
             color: "#66ccff",
-            cursor: "inherit",
             mt: 2,
             "&:hover": {
               backgroundColor: "#66ccff",
@@ -202,7 +204,6 @@ const LeftSideMenu = () => {
               textDecoration: "none",
               outline: "none",
               WebkitTapHighlightColor: "transparent",
-              cursor: "inherit",
             }}
           >
             <GitHubIcon sx={{ fontSize: 24, color: "#66ccff" }} />
@@ -216,12 +217,9 @@ const LeftSideMenu = () => {
               textDecoration: "none",
               outline: "none",
               WebkitTapHighlightColor: "transparent",
-              cursor: "inherit",
             }}
           >
-            <LinkedInIcon
-              sx={{ fontSize: 24, color: "#66ccff", cursor: "inherit" }}
-            />
+            <LinkedInIcon sx={{ fontSize: 24, color: "#66ccff" }} />
           </a>
         </Box>
       </motion.div>
