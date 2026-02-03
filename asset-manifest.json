@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.22130ed6.css",
-    "main.js": "/static/js/main.8e873526.js",
+    "main.js": "/static/js/main.4d90543f.js",
     "static/js/453.df0b3e83.chunk.js": "/static/js/453.df0b3e83.chunk.js",
     "static/media/alarmclock.png": "/static/media/alarmclock.086e06bb4816b53e367b.png",
     "static/media/ecommerce.png": "/static/media/ecommerce.005b9b8260434598d947.png",
@@ -15,11 +15,11 @@
     "static/media/portfoliov1.png": "/static/media/portfoliov1.c1601cc915be4b456b0a.png",
     "index.html": "/index.html",
     "main.22130ed6.css.map": "/static/css/main.22130ed6.css.map",
-    "main.8e873526.js.map": "/static/js/main.8e873526.js.map",
+    "main.4d90543f.js.map": "/static/js/main.4d90543f.js.map",
     "453.df0b3e83.chunk.js.map": "/static/js/453.df0b3e83.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.22130ed6.css",
-    "static/js/main.8e873526.js"
+    "static/js/main.4d90543f.js"
   ]
 }
