@@ -13,6 +13,7 @@ import GymApp from "../images/gymapp.png";
 import NavApp from "../images/navapp.png";
 import AlarmClock from "../images/alarmclock.png";
 import RodiCv from "../static/rodicv.pdf";
+import HyperBoard from "../images/hyperboard.png";
 
 const RightSideGrid = () => {
   return (
@@ -192,6 +193,23 @@ const RightSideGrid = () => {
                     link={"https://dtechtive.com/home"}
                     tags={["HTML", "CSS", "JavaScript", "Python"]}
                   />
+
+                  <ProjectCard
+                    title={"Hyperliquid Analytics Dashboard (Blockchain)"}
+                    image={HyperBoard}
+                    description={
+                      "A real-time analytics dashboard for the Hyperliquid ecosystem, visualizing protocol TVL, derivatives volume, token metrics, and onchain activity. The project uses Next.js, TypeScript, Material UI, and Recharts, integrating live DeFi data APIs to deliver a clean, modern interface for tracking Hyperliquid L1 protocols."
+                    }
+                    link={"https://hyperevm-proj-rgb.vercel.app"}
+                    tags={[
+                      "Next.js",
+                      "TypeScript",
+                      "Material UI",
+                      "Recharts",
+                      "DeFi APIs",
+                    ]}
+                  />
+
                   <ProjectCard
                     title={"E-Commerce Website"}
                     image={Azzab}
