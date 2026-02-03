@@ -198,7 +198,7 @@ const RightSideGrid = () => {
                     title={"Hyperliquid Analytics Dashboard (Blockchain)"}
                     image={HyperBoard}
                     description={
-                      "A real-time analytics dashboard for the Hyperliquid ecosystem, visualizing protocol TVL, derivatives volume, token metrics, and onchain activity. The project uses Next.js, TypeScript, Material UI, and Recharts, integrating live DeFi data APIs to deliver a clean, modern interface for tracking Hyperliquid L1 protocols."
+                      "A real-time analytics dashboard for the Hyperliquid ecosystem, featuring interactive charts, protocol TVL rankings, derivatives volume tracking, and token metrics. Developed with Next.js and TypeScript, styled with Material UI, and powered by live DeFi API integrations for a modern onchain data experience."
                     }
                     link={"https://hyperevm-proj-rgb.vercel.app"}
                     tags={[
@@ -207,6 +207,8 @@ const RightSideGrid = () => {
                       "Material UI",
                       "Recharts",
                       "DeFi APIs",
+                      "Blockchain",
+                      "Web3",
                     ]}
                   />
 
